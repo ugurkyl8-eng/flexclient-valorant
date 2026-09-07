@@ -17,9 +17,9 @@ MUTED = "#9aa8c7"
 GREEN = "#42d392"
 
 MIXES = [
-    ("Mix 1", "Standart mix"),
-    ("Mix 2", "Rekabetçi mix"),
-    ("Mix 3", "Özel mix"),
+    ("Aim Warmup", "Nişan ısınma preset'i"),
+    ("Crosshair Focus", "Crosshair sabitleme preset'i"),
+    ("Utility Review", "Yetenek ve lineup kontrolü"),
 ]
 
 
@@ -98,7 +98,7 @@ class ProfileOverlay:
                            fill=PANEL, outline=PURPLE_DARK, width=2)
         c.create_text(124, 27, text="FLEXCLIENT", anchor="w", fill=TEXT,
                       font=("Segoe UI", 13, "bold"))
-        c.create_text(124, 46, text="Mix menüsü", anchor="w", fill=PURPLE,
+        c.create_text(124, 46, text="Meşru antrenman preset'leri", anchor="w", fill=PURPLE,
                       font=("Segoe UI", 9, "bold"))
 
         for index, (name, subtitle) in enumerate(MIXES):
