@@ -1,0 +1,2 @@
+# FlexClient has no third-party runtime dependencies.
+# PyInstaller is installed by the GitHub Actions workflow.
