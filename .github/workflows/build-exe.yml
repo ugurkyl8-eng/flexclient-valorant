@@ -1,4 +1,4 @@
-name: Build Windows EXE
+name: Build FlexClient EXE
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -20,13 +20,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install build tools
+      - name: Install PyInstaller
         run: python -m pip install --upgrade pip pyinstaller
 
-      - name: Build executable
+      - name: Build FlexClient.exe
         run: pyinstaller --noconfirm --clean --onefile --windowed --name FlexClient app.py
 
-      - name: Upload EXE artifact
+      - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: FlexClient-windows

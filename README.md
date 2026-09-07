@@ -1,22 +1,23 @@
 # FlexClient Valorant
 
-Windows için hazırlanmış, Mix 1 / Mix 2 / Mix 3 seçeneklerini içeren basit bir masaüstü menüsü.
+Bu repo, Valorant açıkken sol üstte görünen basit bir profil avatarı overlay'i içerir.
 
-> Bu proje yerel bir arayüzdür; oyun dosyalarına, belleğine veya Valorant sürecine müdahale etmez.
+- Sağ tık veya `Esc`: kapatır.
+- Avatar sürüklenebilir.
+- Valorant ön planda değilken gizlenir.
+- Oyun dosyalarına, belleğine veya oynanışına müdahale etmez.
 
-## Yerelde çalıştırma
+## EXE üretme
 
-Python 3.10+ ile:
+GitHub Actions içindeki **Build FlexClient EXE** workflow'u her `main` push'unda veya manuel çalıştırmada Windows runner üzerinde `FlexClient.exe` üretir.
+
+1. GitHub'da **Actions** sekmesini aç.
+2. **Build FlexClient EXE** workflow'unu seç.
+3. **Run workflow** ile manuel başlatabilir veya `main` branch'ine push bekleyebilirsin.
+4. Tamamlanınca run sayfasındaki **Artifacts** bölümünden `FlexClient-windows` dosyasını indir.
+
+## Yerel test
 
 ```bash
 python app.py
 ```
-
-## GitHub Actions ile `.exe` üretme
-
-1. `main` branch'ine push yap.
-2. GitHub'da **Actions** sekmesine gir.
-3. **Build Windows EXE** workflow çalışmasını aç.
-4. Tamamlandığında **Artifacts** bölümünden `FlexClient-windows` dosyasını indir.
-
-Workflow, `FlexClient.exe` dosyasını Windows runner üzerinde PyInstaller ile üretir.
